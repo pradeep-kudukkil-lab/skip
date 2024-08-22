@@ -1,0 +1,11 @@
+name: Finding the person
+
+on:
+  workflow_dispatch:
+
+jobs:
+  example-job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Display who triggered the workflow
+        run: echo "The workflow was triggered by ${{ github.actor }}"
