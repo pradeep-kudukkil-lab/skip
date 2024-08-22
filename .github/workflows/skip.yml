@@ -16,10 +16,3 @@ jobs:
       # Add your deployment steps here
       - name: Deploy to production
         run: echo "Deploying to production"
-
-  skip:
-    runs-on: ubuntu-latest
-    if: "!startsWith(github.head_ref, 'feature/')"
-    steps:
-      - name: Skip deployment
-        run: echo "Deployment skipped because branch is not from feature/*"
